@@ -1,6 +1,7 @@
 import {listenAndServe, ServerRequest} from "https://deno.land/std/http/server.ts"
 import {acceptable, acceptWebSocket} from "https://deno.land/std/ws/mod.ts"
 import {Router} from "./router.ts"
+import {chat} from "./chat.ts";
 
 listenAndServe({ port: 3000 }, async (req: ServerRequest) => {
     const router = new Router(req);
@@ -16,7 +17,7 @@ listenAndServe({ port: 3000 }, async (req: ServerRequest) => {
                 bufReader: request.r,
                 bufWriter: request.w,
                 headers: request.headers
-            })
+            }).then(chat)
         }
     })
 })
