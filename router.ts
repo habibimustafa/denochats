@@ -10,12 +10,12 @@ export class Router {
     public get(route: string, response: Response): void {
         if (this.req.method.toUpperCase() !== 'GET') return
         if (this.req.url !== route) return
-        this.req.respond(response)
+        this.req.respond(Object.assign({status: 200}, response))
     }
 
     public post(route: string, response: Response): void {
         if (this.req.method.toUpperCase() !== 'POST') return
         if (this.req.url !== route) return
-        this.req.respond(response)
+        this.req.respond(Object.assign({status: 200}, response))
     }
 }
