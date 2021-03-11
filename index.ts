@@ -7,3 +7,5 @@ listenAndServe({ port: 3000 }, async (req) => {
         body: await Deno.open('./index.html')
     })
 })
+
+console.log("Server running on localhost:3000")
