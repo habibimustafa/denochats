@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Deno Chats</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-    HTML file served correctly
+    <div class="container">
+        <div class="row justify-content-center chat-area">
+            <div class="col col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-6 col-sm-12">
+                <ul class="list-unstyled"></ul>
+            </div>
+        </div>
+        <div class="row justify-content-center message-form">
+            <div class="col col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-6 col-sm-12">
+                <textarea id="message" class="form-control" placeholder="type a message"></textarea>
+                <div class="chat_bottom mt-3">
+                    <input type="checkbox" id="quickMsg" checked="checked"> Enter to Send Message
+                    <div class="pull-right">
+                        <button id="mic_btn" class="btn btn-success fa fa-lg fa-microphone"></button>
+                        <button id="send_btn" class="btn btn-success fa fa-lg fa-paper-plane"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
